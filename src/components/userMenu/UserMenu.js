@@ -26,7 +26,7 @@ const UserMenu = ({menuOpen, getMenuOpen}) => {
                         <p onClick={getMenuOpen}>Информация о Профиле</p>
                     </NavLink>
                     <p>Корзина</p>
-                    <p>Выбрать Местоположение</p>
+                    <p>Заказы</p>
                     <button onClick={() => getOut()} className="user_menu_logOut">Log Out</button>
                 </div>
             </div>

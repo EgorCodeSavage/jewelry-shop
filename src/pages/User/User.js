@@ -10,7 +10,6 @@ import { updateEmail, updateProfile } from "firebase/auth";
 const User = () => {
 
     const {currentUser} = useContext(AuthContext);
-    console.log(currentUser);
    
     const [currentName, setCurrentName] = useState(false);
     const getCurrentName = () => {
@@ -200,17 +199,21 @@ const User = () => {
                         <input className="setting_input" type="text" placeholder="Изменить данные"></input>
                         <button className="setting_cunfirm">Подтвердить изменения</button>
                     </form>
+                    <p className="user_page_success">{success}</p>
+                    <p className="user_page_error">{err}</p>
                 </div>
             )
         } else if (currentNumber !== false) {
             return (
                 <div className="user_page_setting">
                     <p className="setting_name">Телефон</p>
-                    <p className="current_value">{userInfo.phone}</p>
+                    <p className="current_value">{userInfo.phoneNumber}</p>
                     <form className="setting_form" onSubmit={addNumber}>
                         <input className="setting_input" type="text" placeholder="Изменить данные"></input>
                         <button className="setting_cunfirm">Подтвердить изменения</button>
                     </form>
+                    <p className="user_page_success">{success}</p>
+                    <p className="user_page_error">{err}</p>
                 </div>
             )
         }
@@ -222,7 +225,7 @@ const User = () => {
                 <div className="user_page_left">
                     <img className="user_page_logo" src={user} alt="user_logo"/>
                     <div className="user_page_infouser">
-                        <p onClick={getCurrentName} className="user_page_displayName">Имя:{userInfo.displayName}</p>
+                        <p onClick={getCurrentName} className="user_page_displayName">Имя: {userInfo.displayName}</p>
                         <p onClick={getCurrentEmail} className="user_page_email">Почта: {userInfo.email}</p>
                         <p onClick={getCurrentAdres} className="user_page_adres">Адрес: {userInfo.adres}</p>
                         <p onClick={getCurrentNumber} className="user_page_number">Телефон: {userInfo.phoneNumber}</p>

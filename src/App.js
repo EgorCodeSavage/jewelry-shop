@@ -8,6 +8,8 @@ import Register from "./pages/LoginPage/Register";
 import Login from "./pages/LoginPage/Login";
 import ScrollToTop from "./utils/ScrollToTop";
 import User from "./pages/User/User";
+import AboutFabric from "./pages/AboutFabric/AboutFabric";
+import Catalog from "./pages/Catalog/Catalog";
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/user" element={<User />}/>
+                  <Route path="/aboutus" element={<AboutFabric />}/>
+                  <Route path="/catalog" element={<Catalog />}/>
                 </Routes>
               <Footer />
           </Router>

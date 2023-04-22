@@ -1,0 +1,26 @@
+.catalog_content {
+    margin-top: 50px;
+}
+.catalog_components {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.catalog_component {
+    margin-right: 20px;
+    text-transform: uppercase;
+    opacity: 0.4;
+
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.catalog_component:last-child {
+    margin-right: 0px;
+}
+.catalog_component:hover {
+    opacity: 1;
+    
+}
+.catalog_products {
+
+}

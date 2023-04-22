@@ -13,10 +13,12 @@ import facebook from "./../../img/facebook.png"
 
 import "./style.css"
 import { NavLink } from "react-router-dom"
+import { useContext } from "react"
+import { AuthContext } from "../../context/AuthContext"
 
 const Home = () => {
 
-    
+    const {currentUser} = useContext(AuthContext);
 
     return ( 
         <div className="home_inner">
@@ -24,9 +26,10 @@ const Home = () => {
                 <div className="home_first_title">
                     <h1 className="home_first_title_text">Discover The<br /> Exceptional Jewellery<br /> With Us</h1>
                     <p className="home_fisrt_text">Lorem ipsum dolor sit amet. Qui consequatur sint 33 voluptatem officia et<br /> sint laboriosam sed ipsa sin</p>
-                    <NavLink to="/register">
-                        <button className="home_first_title_btn">GET STARTED</button>
-                    </NavLink>  
+                    {
+                        currentUser !== null ? <button className="home_first_title_btn">GET STARTED</button> : <NavLink to="/register"><button className="home_first_title_btn">GET STARTED</button></NavLink>
+                    }
+                     
                 </div>
                 <div className="home_first_item">
                     <img className="home_ring1" src={ring1} alt=""/>

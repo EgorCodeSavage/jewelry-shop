@@ -37,7 +37,7 @@ const Login = () => {
                 <form className="form_login" onSubmit={handleSubmit}>
                     <input className="email" type="email" placeholder="email"></input>
                     <input className="password" type="password" placeholder="password"></input>
-                    <button className="register_btn">Sing Up</button>
+                    <button className="register_btn">Sing In</button>
                 </form>
                 <div className="to_login">
                     <p>You don't have an account?</p>

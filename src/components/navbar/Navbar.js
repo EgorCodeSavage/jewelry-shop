@@ -33,16 +33,22 @@ const NavBar = () => {
             <NavLink to="/" style={{textDecoration: 'none', color: 'white'}}>
                 <div className="navbar_logo">
                     <img className="logo" src={logo} alt=""/>
-                    <h2 className="logo_name">МальВа</h2>
+                    <h2 className="logo_name">ФабриКа</h2>
                 </div>
             </NavLink>
             <div className="navbar_navigation">
                 <NavLink to="/" className={({isActive}) => isActive ? activeLink : notActiveLink} style={{textDecoration: 'none', color: 'white'}}>
                     <p className="navbar_nav">Домашня сторінка</p>
                 </NavLink>
-                <p className="navbar_nav">О фабрице</p>
+                <NavLink to="/aboutus" className={({isActive}) => isActive ? activeLink : notActiveLink} style={{textDecoration: 'none', color: 'white'}}>
+                    <p className="navbar_nav">Про фабрику</p>
+                </NavLink>
+
                 <p className="navbar_nav">Сервіси</p>
-                <p className="navbar_nav">Каталог</p>
+
+                <NavLink to="/catalog" className={({isActive}) => isActive ? activeLink : notActiveLink} style={{textDecoration: 'none', color: 'white'}}>
+                    <p className="navbar_nav">Каталог</p>
+                </NavLink>
             </div>
             <div className="navbar_login">
                 {
