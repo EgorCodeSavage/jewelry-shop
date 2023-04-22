@@ -1,0 +1,91 @@
+.user_page {
+    padding: 60px 0px;
+}
+.user_page_content {
+
+}
+.user_page_left {
+    display: flex;
+}
+.user_page_logo {
+    height: 100px;
+    width: 100px;
+    margin-right: 30px;
+}
+.user_page_infouser p {
+    margin-bottom: 10px;
+    cursor: pointer;
+    max-width: 300px;
+}
+.user_page_displayName {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    padding: 0px 5px;
+}
+.user_page_email {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    padding: 0px 5px;
+}
+.user_page_adres {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    padding: 0px 5px;
+}
+.user_page_number {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    padding: 0px 5px;
+}
+.user_page_setting {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.setting_name {
+    font-size: 15px;
+    font-weight: 700;
+}
+.current_value {
+    
+}
+.setting_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 190px;
+}
+.setting_input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    margin-bottom: 10px;
+}
+.setting_cunfirm {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+.user_page_success {
+    color: green;
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+.user_page_error {
+    color: red;
+    font-size: 12px;
+
+    margin-top: 5px;
+}

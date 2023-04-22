@@ -1,0 +1,114 @@
+.navbar_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+}
+.logo {
+    margin-right: 10px;
+}
+.logo_name {
+
+}
+.navbar_navigation {
+    display: flex;
+}
+.navbar_nav {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-right: 44px;
+
+    cursor: pointer;
+
+    opacity: 0.6;
+    transition: .6s linear;
+}
+.navbar_nav:hover {
+    opacity: 1;
+}
+.navbar_login {
+    display: flex;
+}
+.navbar_btn_login {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 5px 15px;
+    background: none;
+    border: 1px solid grey;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.navbar_btn_getstart {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: #ffffff;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}   
+.navbar_nav_active .navbar_nav {
+    color: #ffffff;
+    opacity: 1;
+}
+.navbar_nav_notactive {
+    color: #ffffff;
+}
+.user_accaunt {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.user_accaunt_name {
+    margin-right: 5px;
+}
+.user_accaunt_photo {
+    height: 40px;
+    width: 40px;
+}
+.user_accaunt_triangle--close {
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+}
+.user_accaunt_triangle--open {
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+
+    transform: rotate(180deg);
+
+    
+}
+
+.menu_is_close {
+    display: none;
+
+    position: absolute;
+
+    z-index: 100;
+}
+.menu_is_open {
+    display: block;
+    position: fixed;
+
+    top: 10vh;
+    left: 35%;
+
+    
+    z-index: 100;
+}
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+.user_menu {
+    color: #000000;
+    background-color: #ffffff;
+    width: 400px;
+    height: 500px;
+
+    border-radius: 15px;
+    padding: 10px 20px;
+
+    text-align: center;
+}
+.user_menu_header {
+    display: flex;
+    justify-content: space-between;
+}
+.user_menu_name {
+    font-size: 20px;
+}
+.user_menu_open {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+.user_menu_info {
+    margin-top: 80px;
+}
+.user_menu_info p {
+    margin-bottom: 20px;
+}
+.user_menu_info p:hover {
+    border-bottom: 1px #000000 solid;
+    margin-bottom: 19px;
+}
+.user_menu_logOut {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 40px;
+
+    cursor: pointer;
+}
