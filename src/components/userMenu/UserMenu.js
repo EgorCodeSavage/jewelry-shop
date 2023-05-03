@@ -2,8 +2,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./style.css"
 import { signOut } from "firebase/auth";
 import { auth } from "../../FireBase";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const UserMenu = ({menuOpen, getMenuOpen}) => {
+
 
     const navigation = useNavigate();
 
@@ -13,6 +16,26 @@ const UserMenu = ({menuOpen, getMenuOpen}) => {
         navigation("/")
     }
 
+    const {currentUser} = useContext(AuthContext);
+
+    const adminCheck = () => {
+        if (currentUser) {
+            if (currentUser.email === "admin@gmail.com") {
+                return (
+                    <NavLink to="/admin-panel">
+                        <button className="admin_btn">Панель администратора</button>
+                    </NavLink>
+                )
+            } else {
+                return (
+                    <>
+                        <p>Корзина</p>
+                        <p>История заказов</p>
+                    </>
+                )
+            }
+        }  
+    }
 
     return ( 
         <div className="user_menu">
@@ -25,10 +48,9 @@ const UserMenu = ({menuOpen, getMenuOpen}) => {
                     <NavLink to="/user" style={{textDecoration: 'none', color: '#000000'}}>
                         <p onClick={getMenuOpen}>Информация о Профиле</p>
                     </NavLink>
-                    <p>Корзина</p>
-                    <p>Заказы</p>
-                    <button onClick={() => getOut()} className="user_menu_logOut">Log Out</button>
+                    {adminCheck()}
                 </div>
+                <button onClick={() => getOut()} className="user_menu_logOut">Log Out</button>
             </div>
         </div>
      );

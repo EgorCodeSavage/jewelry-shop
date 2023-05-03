@@ -24,6 +24,11 @@ const NavBar = () => {
 
     const getMenuOpen = () =>{
         setMenuOpen(menuOpen === "close" ? "open" : "close");
+        if (menuOpen === "close") {
+            document.body.style.overflow = "hidden";
+        } else if (menuOpen === "open") {
+            document.body.style.overflow = "unset";
+        }
     };
 
 

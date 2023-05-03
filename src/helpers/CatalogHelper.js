@@ -1,4 +1,4 @@
-export const Catalog = [
+export const catalogList = [
     {
         name: "Аксессуары",
         underGroup: [
@@ -8,6 +8,19 @@ export const Catalog = [
         ]
     },
     {
-
+        name: "Браслеты",
+        underGroup: [
+            "Мужские",
+            "С топазом",
+            "Без камней"
+        ]
     },
+    {
+        name: "Броши",
+        underGroup: [
+            "Без камней",
+            "С жемчугом",
+            "Красное золото",
+        ]
+    }
 ]

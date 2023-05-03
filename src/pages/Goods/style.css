@@ -1,0 +1,29 @@
+.goods {
+
+}
+.goods_content {
+    margin: 50px 0px;
+}
+.goods_title {
+
+}
+.goods_items {
+    display: flex;
+    flex-direction: column;
+}
+.goods_item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.goods_item_img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+.goods_item p {
+    margin-right: 10px;
+}
+.goods_item p span {
+    text-transform: uppercase;
+}

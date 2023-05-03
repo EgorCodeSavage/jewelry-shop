@@ -46,3 +46,12 @@
 
     cursor: pointer;
 }
+.admin_btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #d6a110;
+    border: none;
+
+}

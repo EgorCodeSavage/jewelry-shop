@@ -10,9 +10,11 @@ import ScrollToTop from "./utils/ScrollToTop";
 import User from "./pages/User/User";
 import AboutFabric from "./pages/AboutFabric/AboutFabric";
 import Catalog from "./pages/Catalog/Catalog";
+import Products from "./pages/Products/Products";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
+import Goods from "./pages/Goods/Goods";
 
 function App() {
-
   
 
   return (
@@ -28,6 +30,9 @@ function App() {
                   <Route path="/user" element={<User />}/>
                   <Route path="/aboutus" element={<AboutFabric />}/>
                   <Route path="/catalog" element={<Catalog />}/>
+                  <Route path="/products" element={<Products />}/>
+                  <Route path="/admin-panel" element={<AdminPanel />}/>
+                  <Route path="/admin-panel-goods" element={<Goods />}/>
                 </Routes>
               <Footer />
           </Router>

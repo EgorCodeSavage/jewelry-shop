@@ -1,0 +1,26 @@
+.admin_panel {
+
+}
+.admin_panel_content {
+    margin: 50px 0;
+}
+.admin_panel_title {
+    margin-bottom: 50px;
+}
+.admin_panel_buttons {
+    display: flex;
+    justify-content: center;
+}
+.admin_panel_btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.admin_panel_btn:last-child {
+    margin-right: 0px;
+}
+.admin_panel_nav {
+    margin-right: 50px;
+}
