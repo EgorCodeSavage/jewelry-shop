@@ -4,6 +4,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../FireBase";
 
 import ring3 from "./../../img/ring3.png"
+import Modal from "../../components/goods-modal/Modal";
 
 const Goods = () => {
 
@@ -18,10 +19,25 @@ const Goods = () => {
         getAllGoods();
     }, []);
 
+    const [showModal, setShowModal] = useState(false);
+
+    const getShow = () => {
+        setShowModal(!showModal);
+        if (showModal === false) {
+            document.body.style.overflow= "hidden";
+        } else {
+            document.body.style.overflow= "auto";
+        }
+    };
+
     return ( 
         <div className="goods">
             <div className="goods_content">
-                <h2 className="goods_title">Товары</h2>
+                <Modal showModal={showModal} setShowModal={setShowModal} getShow={getShow}/>
+                <div className="goods_content_top">
+                    <h2 className="goods_title">Товары</h2>
+                    <button className={showModal ? "goods_add_new--active" : 'goods_add_new--notactive'} onClick={getShow}>Добавить новый товар</button>
+                </div>
                 <div className="goods_items">
                     {
                         goods.map((good) => <div key={good.id} className="goods_item">
