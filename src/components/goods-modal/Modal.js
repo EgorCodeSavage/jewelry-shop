@@ -3,7 +3,7 @@ import logoring from "./../../img/logo-ring.png"
 import addimg from "./../../img/add-image.png"
 import { doc, setDoc, updateDoc, getDoc} from "firebase/firestore"
 import {db, storage} from "./../../FireBase"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage"
  
 const Modal = ({showModal, getShow, setShowModal}) => {
@@ -17,15 +17,19 @@ const Modal = ({showModal, getShow, setShowModal}) => {
     const [goodCount, setGoodCount] = useState('');
     const [Img, setImg] = useState(null);
 
- 
+    const getGooodUid = () => {
+        setGoodUid(goodClass.charAt(0) + goodName.charAt(0) + goodMaterial.charAt(0) + goodRock.charAt(0));
+    };
+    
+    useEffect(() => {
+        getGooodUid();
+    });
+
     const handleSubmit = async(e) => {
         
         e.preventDefault();
 
-        setGoodUid(goodClass.charAt(0) + goodName.charAt(0) + goodMaterial.charAt(0) + goodRock.charAt(0));
-        
         try {
-
             const docRef = doc(db, "goods", goodClass);
             const docSnap = await getDoc(docRef);
 
@@ -39,7 +43,7 @@ const Modal = ({showModal, getShow, setShowModal}) => {
                         console.log(error.message);
                     },
                     () => {
-                        getDownloadURL(uploadTask.snapshot.ref ).then(async (downloadURL) => {
+                        getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
                             if (docSnap.exists()) {
                                 await updateDoc(doc(db, "goods", goodClass), {
                                     [goodUid]: {
