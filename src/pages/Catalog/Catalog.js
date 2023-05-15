@@ -35,7 +35,7 @@ const Catalog = () => {
                 <div id="1" onClick={showItems} className="catalog_component">{catalogList[1].name}</div>
                 <div id="2" onClick={showItems} className="catalog_component">{catalogList[2].name}</div>
                 <div className="catalog_component">Колье</div>
-                <div className="catalog_component">Кольца</div>
+                <div className="catalog_component">Браслеты</div>
                 <div className="catalog_component">Подвески</div>
                 <div className="catalog_component">Серьги</div>
                 <div className="catalog_component">Цепи</div>

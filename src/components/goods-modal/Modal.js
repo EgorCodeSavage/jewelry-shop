@@ -1,7 +1,7 @@
 import "./style.css"
 import logoring from "./../../img/logo-ring.png"
 import addimg from "./../../img/add-image.png"
-import { doc, setDoc, updateDoc, getDoc} from "firebase/firestore"
+import { doc, setDoc, updateDoc, getDoc } from "firebase/firestore"
 import {db, storage} from "./../../FireBase"
 import { useEffect, useState } from "react"
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage"
@@ -45,26 +45,24 @@ const Modal = ({showModal, getShow, setShowModal}) => {
                     () => {
                         getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
                             if (docSnap.exists()) {
-                                await updateDoc(doc(db, "goods", goodClass), {
-                                    [goodUid]: {
-                                        class: goodClass,
-                                        name: goodName,
-                                        material: goodMaterial,
-                                        rock: goodRock,
-                                        count: goodCount,
-                                        imageURL: downloadURL
-                                    }
+                                await updateDoc(doc(db, "goods", goodUid), {
+                                    id: goodUid,
+                                    class: goodClass,
+                                    name: goodName,
+                                    material: goodMaterial,
+                                    rock: goodRock,
+                                    count: goodCount,
+                                    imageURL: downloadURL
                                 }); 
                             } else {
-                                await setDoc(doc(db, "goods", goodClass), {
-                                    [goodUid]: {
-                                        class: goodClass,
-                                        name: goodName,
-                                        material: goodMaterial,
-                                        rock: goodRock,
-                                        count: goodCount,
-                                        imageURL: downloadURL
-                                    }
+                                await setDoc(doc(db, "goods", goodUid), {
+                                    id: goodUid,
+                                    class: goodClass,
+                                    name: goodName,
+                                    material: goodMaterial,
+                                    rock: goodRock,
+                                    count: goodCount,
+                                    imageURL: downloadURL
                                 });
                             };
 
@@ -75,24 +73,22 @@ const Modal = ({showModal, getShow, setShowModal}) => {
                 )
             } else {
                 if (docSnap.exists()) {
-                    await updateDoc(doc(db, "goods", goodClass), {
-                        [goodUid]: {
-                            class: goodClass,
-                            name: goodName,
-                            material: goodMaterial,
-                            rock: goodRock,
-                            count: goodCount
-                        }
+                    await updateDoc(doc(db, "goods", goodUid), {
+                        id: goodUid,
+                        class: goodClass,
+                        name: goodName,
+                        material: goodMaterial,
+                        rock: goodRock,
+                        count: goodCount
                     }); 
                 } else {
-                    await setDoc(doc(db, "goods", goodClass), {
-                        [goodUid]: {
-                            class: goodClass,
-                            name: goodName,
-                            material: goodMaterial,
-                            rock: goodRock,
-                            count: goodCount
-                        }
+                    await setDoc(doc(db, "goods", goodUid), {
+                        id: goodUid,
+                        class: goodClass,
+                        name: goodName,
+                        material: goodMaterial,
+                        rock: goodRock,
+                        count: goodCount
                     });
             }
         };

@@ -8,9 +8,9 @@ export const catalogList = [
         ]
     },
     {
-        name: "Браслеты",
+        name: "Кольца",
         underGroup: [
-            "Мужские",
+            "С Алмазом",
             "С топазом",
             "Без камней"
         ]
