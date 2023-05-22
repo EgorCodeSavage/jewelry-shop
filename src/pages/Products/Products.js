@@ -6,6 +6,7 @@ import logoring from "./../../img/logo-ring.png"
 import { useEffect, useState } from "react"
 import { collection, getDocs} from "firebase/firestore"
 import { db } from "../../FireBase"
+import ProductsModal from "../../components/products-modal/ProductsModal"
 
 const Products = () => {
 
@@ -20,9 +21,26 @@ const Products = () => {
         getAllItems();
     }, [goods]);
 
-    console.log(goods);
+
+    const [showModalProd, setShowModalProd] = useState('');
+    const [isShowModal, setIsShowModal] = useState(false);
+    
+    const getShowModalProd = () => {
+        setIsShowModal(!isShowModal);
+
+        if (isShowModal === false) {
+            document.body.style.overflow= "hidden";
+        } else {
+            document.body.style.overflow= "auto";
+        }
+    }
+
+    
+
+    
     return ( 
         <div className="products">
+            <ProductsModal isShowModal={isShowModal} getShowModalProd={getShowModalProd} showModalProd={showModalProd} />
             <div className="products_contents">
                 <div className="products_navbar">
                     <h2 className="products_title">Наши изделия</h2>
@@ -33,7 +51,7 @@ const Products = () => {
                 </div>
                 <div className="products_items">
                     {
-                        goods.map((elem, index) => <div key={index} className="products_item">
+                        goods.map((elem) => <div key={elem.id} className="products_item" onClick={() => getShowModalProd(setShowModalProd(elem.id))}>
                                         <h2 className="product_item_name">{elem.class} {elem.name}</h2>
                                         <img className={elem.imageURL ? "product_item_img" : "product_item_img--with_out_img"} src={elem.imageURL ? elem.imageURL : logoring} alt="product_item_img"/>
                                         <div className="product_item_info">

@@ -1,3 +1,6 @@
+.products {
+    position: relative;
+}
 .products_contents {
     margin: 50px 0px;
 }

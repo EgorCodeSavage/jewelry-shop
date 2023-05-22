@@ -1,0 +1,42 @@
+.products_modal--open {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+
+    text-align: center;
+    background-color: rgb(192, 190, 190);
+    width: 800px;
+    height: fit-content;
+}
+.products_modal--close {
+    display: none;
+}
+
+.products_modal_content {
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.products_modal_btn {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.products_modal_btn button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.products_modal_inner {
+
+}
+.products_modal_img {
+    width: 100px;
+    height: 120px;
+}
+.products_modal_count--yes {
+    color: green;
+}
+.products_modal_count--no {
+    color: red;
+}
