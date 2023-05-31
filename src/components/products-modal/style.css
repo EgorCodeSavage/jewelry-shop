@@ -1,12 +1,17 @@
 .products_modal--open {
     position: fixed;
+
+    z-index: 100;
     top: 100px;
     left: 300px;
 
     text-align: center;
-    background-color: rgb(192, 190, 190);
+    background-color: #ffffff;
+    color: #000000;
     width: 800px;
     height: fit-content;
+
+    border-radius: 10px;
 }
 .products_modal--close {
     display: none;
@@ -14,7 +19,6 @@
 
 .products_modal_content {
     padding: 10px;
-    border-radius: 10px;
     
 }
 .products_modal_btn {
@@ -39,4 +43,18 @@
 }
 .products_modal_count--no {
     color: red;
+}
+.products_modal_btns {
+    text-align: end;
+    margin: 10px 20px 10px 0;
+}
+.products_modal_btns button {
+    font-size: 15px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }

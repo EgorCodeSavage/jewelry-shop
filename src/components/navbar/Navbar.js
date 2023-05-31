@@ -3,6 +3,7 @@ import "./style.css"
 import logo from "./../../img/logo.png"
 import userLogoo from "./../../img/user.png"
 import triangle from "./../../img/triangle.png"
+import bucket from "./../../img/bucket.png"
 
 import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
@@ -76,6 +77,9 @@ const NavBar = () => {
             <div className={`menu_is_${menuOpen}`}>
                 <UserMenu menuOpen={menuOpen} getMenuOpen={getMenuOpen} />
             </div>
+            <NavLink to="/bucket">
+                <img className="bucket" src={bucket} alt="bucket"/>
+            </NavLink>
         </div>
      );
 }

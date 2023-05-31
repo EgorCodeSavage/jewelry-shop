@@ -13,6 +13,7 @@ import Catalog from "./pages/Catalog/Catalog";
 import Products from "./pages/Products/Products";
 import AdminPanel from "./pages/AdminPanel/AdminPanel";
 import Goods from "./pages/Goods/Goods";
+import Bucket from "./pages/Bucket/Bucket";
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
                   <Route path="/products" element={<Products />}/>
                   <Route path="/admin-panel" element={<AdminPanel />}/>
                   <Route path="/admin-panel-goods" element={<Goods />}/>
+                  <Route path="/bucket" element={<Bucket />}/>
                 </Routes>
               <Footer />
           </Router>

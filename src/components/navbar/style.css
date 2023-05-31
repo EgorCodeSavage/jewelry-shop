@@ -107,6 +107,11 @@
     z-index: 100;
 }
 
+.bucket {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
 
 
 

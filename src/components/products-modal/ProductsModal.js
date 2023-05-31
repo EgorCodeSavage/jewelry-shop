@@ -46,6 +46,9 @@ const ProductsModal = ({isShowModal, getShowModalProd, showModalProd}) => {
                             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
                             deserunt mollit anim id est laborum</p>
+                        <div className="products_modal_btns">
+                            <button>Добавить в корзину</button>
+                        </div>
                     </div>
                 </div> : <div className="products_modal_content">Loading..</div>
             }
